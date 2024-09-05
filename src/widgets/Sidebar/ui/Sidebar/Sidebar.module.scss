@@ -1,0 +1,49 @@
+.Sidebar {
+	width: var(--sidebar-width);
+	height: calc(100vh - var(--navbar-height));
+	background-color: var(--inverted-bg-color);
+	transition: width 0.3s ease 0s;
+	position: relative;
+}
+
+.colappsed {
+	width: var(--sidebar-width-colappsed);
+
+	.buttonColappsed {
+
+		div {
+
+			svg {
+				transform: rotate(90deg);
+			}
+		}
+	}
+
+	.switchers {
+		flex-direction: column;
+	}
+}
+
+button.buttonColappsed {
+	position: absolute;
+	right: -40px;
+	bottom: 40px;
+	background-color: var(--inverted-bg-color);
+
+	div {
+
+		svg {
+			transition: transform 0.3s ease 0s;
+			transform: rotate(-90deg);
+		}
+	}
+}
+
+.switchers {
+	position: absolute;
+	display: flex;
+	flex-direction: row-reverse;
+	gap: 15px;
+	bottom: 40px;
+	left: 15px;
+}
