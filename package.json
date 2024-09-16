@@ -16,7 +16,7 @@
 		"test:ui:ok": "npx loki approve",
 		"test:ui:ci": "loki --requireReference --reactUri file:./storybook-static",
 		"storybook": "storybook dev -p 6006 -c ./config/storybook",
-		"storybook:build": "storybook build ./config/storybook"
+		"storybook:build": "storybook build --config-dir ./config/storybook"
 	},
 	"keywords": [],
 	"author": "",
@@ -40,7 +40,7 @@
 		"@testing-library/dom": "^10.4.0",
 		"@testing-library/jest-dom": "^6.5.0",
 		"@testing-library/react": "^16.0.1",
-		"@types/jest": "^29.5.12",
+		"@types/jest": "^29.5.13",
 		"@types/node": "^22.5.4",
 		"@types/react": "^18.3.5",
 		"@types/react-dom": "^18.3.0",
