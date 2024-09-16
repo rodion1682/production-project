@@ -20,6 +20,7 @@ export function Sidebar({ className }: SidebarProps) {
 
    return (
       <div
+         data-testid="sidebar"
          className={classNames(cls.Sidebar, { [cls.colappsed]: colappsed }, [
             className,
          ])}
@@ -29,6 +30,7 @@ export function Sidebar({ className }: SidebarProps) {
             <ThemeSwitcher />
          </div>
          <Button
+            data-testid="sidebar-toggle"
             className={classNames(cls.buttonColappsed, {}, [])}
             onClick={toggleColappsed}
          >
