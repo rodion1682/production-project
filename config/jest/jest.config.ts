@@ -1,4 +1,4 @@
-//@ts-ignore
+// @ts-ignore
 import path from 'path';
 
 export default {
@@ -12,9 +12,9 @@ export default {
 	rootDir: '../../',
 	setupFilesAfterEnv: ['<rootDir>/config/jest/setupTest.ts'],
 	moduleNameMapper: {
-		//@ts-ignore
+		// @ts-ignore
 		'\\.s?css$': 'identity-obj-proxy',
-		//@ts-ignore
+		// @ts-ignore
 		'\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
 	},
 };
