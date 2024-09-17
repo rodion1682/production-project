@@ -1,5 +1,5 @@
 import 'app/styles/index.scss';
 import { StoryFn } from '@storybook/react';
 
-//@ts-ignore
+// @ts-ignore
 export const StyleDecorator = (story: StoryFn) => story();

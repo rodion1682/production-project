@@ -8,5 +8,5 @@ interface SvgIconProps {
 }
 
 export const SvgIcon: FC<SvgIconProps> = ({ className, children }) => (
-   <div className={classNames(cls.SvgIcon, {}, [className])}>{children}</div>
+	<div className={classNames(cls.SvgIcon, {}, [className])}>{children}</div>
 );

@@ -4,7 +4,7 @@
 		"color-hex-length": "long",
 		"import-notation": "string",
 		"selector-class-pattern": null,
-		"rule-empty-line-before": "always",
+		"rule-empty-line-before": null,
 		"no-descending-specificity": null
 	}
 }

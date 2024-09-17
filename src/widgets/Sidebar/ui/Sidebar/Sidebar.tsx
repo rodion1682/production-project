@@ -12,32 +12,32 @@ interface SidebarProps {
 }
 
 export function Sidebar({ className }: SidebarProps) {
-   const [colappsed, setColappsed] = useState(false);
+	const [colappsed, setColappsed] = useState(false);
 
-   const toggleColappsed = () => {
-      setColappsed((prev) => !prev);
-   };
+	const toggleColappsed = () => {
+		setColappsed((prev) => !prev);
+	};
 
-   return (
-      <div
-         data-testid="sidebar"
-         className={classNames(cls.Sidebar, { [cls.colappsed]: colappsed }, [
-            className,
-         ])}
-      >
-         <div className={classNames(cls.switchers, {}, [])}>
-            <LangSwitcher />
-            <ThemeSwitcher />
-         </div>
-         <Button
-            data-testid="sidebar-toggle"
-            className={classNames(cls.buttonColappsed, {}, [])}
-            onClick={toggleColappsed}
-         >
-            <SvgIcon>
-               <Chevrone />
-            </SvgIcon>
-         </Button>
-      </div>
-   );
+	return (
+		<div
+			data-testid="sidebar"
+			className={classNames(cls.Sidebar, { [cls.colappsed]: colappsed }, [
+				className,
+			])}
+		>
+			<div className={classNames(cls.switchers, {}, [])}>
+				<LangSwitcher />
+				<ThemeSwitcher />
+			</div>
+			<Button
+				data-testid="sidebar-toggle"
+				className={classNames(cls.buttonColappsed, {}, [])}
+				onClick={toggleColappsed}
+			>
+				<SvgIcon>
+					<Chevrone />
+				</SvgIcon>
+			</Button>
+		</div>
+	);
 }

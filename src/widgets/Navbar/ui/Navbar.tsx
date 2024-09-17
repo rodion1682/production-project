@@ -9,21 +9,21 @@ interface NavbarProps {
 }
 
 export function Navbar({ className }: NavbarProps) {
-   const { t } = useTranslation();
-   return (
-      <nav className={classNames(cls.Navbar, {}, [className])}>
-         <div className={classNames(cls.links, {}, [])}>
-            <AppLink
-               to="/"
-               theme={AppLinkTheme.SECONDARY}
-               children={t('Main Page')}
-            />
-            <AppLink
-               to="/about"
-               theme={AppLinkTheme.SECONDARY}
-               children={t('About Page')}
-            />
-         </div>
-      </nav>
-   );
+	const { t } = useTranslation();
+	return (
+		<nav className={classNames(cls.Navbar, {}, [className])}>
+			<div className={classNames(cls.links, {}, [])}>
+				<AppLink
+					to="/"
+					theme={AppLinkTheme.SECONDARY}
+					children={t('Main Page')}
+				/>
+				<AppLink
+					to="/about"
+					theme={AppLinkTheme.SECONDARY}
+					children={t('About Page')}
+				/>
+			</div>
+		</nav>
+	);
 }

@@ -7,13 +7,13 @@ interface NotFoundProps {
 }
 
 function NotFound({ className }: NotFoundProps) {
-   const { t } = useTranslation();
+	const { t } = useTranslation();
 
-   return (
-      <div className={classNames(cls.NotFound, {}, [className])}>
-         {t('Page not found')}
-      </div>
-   );
+	return (
+		<div className={classNames(cls.NotFound, {}, [className])}>
+			{t('Page not found')}
+		</div>
+	);
 }
 
 export default NotFound;
