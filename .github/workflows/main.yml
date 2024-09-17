@@ -15,34 +15,35 @@ jobs:
 
       steps:
          - uses: actions/checkout@v2
-         - name: Staring Node.js ${{ matrix.node-version }}
+
+         - name: Set up Node.js ${{ matrix.node-version }}
            uses: actions/setup-node@v1
            with:
               node-version: ${{ matrix.node-version }}
 
-         - name: install modules
+         - name: Install modules
            run: npm install
 
-         - name: build production project
+         - name: Build production project
            run: npm run build:prod
-            if: ${{ always() }}
+           if: success() || failure()
 
-         - name: linting typescript
+         - name: Lint TypeScript
            run: npm run lint:ts
-            if: ${{ always() }}
+           if: success() || failure()
 
-         - name: linting css
+         - name: Lint CSS
            run: npm run lint:scss
-            if: ${{ always() }}
+           if: success() || failure()
 
-         - name: unit testing
+         - name: Run unit tests
            run: npm run test:unit
-            if: ${{ always() }}
+           if: success() || failure()
 
-         - name: build storybook
+         - name: Build Storybook
            run: npm run storybook:build
-            if: ${{ always() }}
+           if: success() || failure()
 
-         - name: screenshot testing
+         - name: Screenshot testing
            run: npm run test:ui:ci
-            if: ${{ always() }}
+           if: success() || failure()
