@@ -6,24 +6,6 @@
 	position: relative;
 }
 
-.colappsed {
-	width: var(--sidebar-width-colappsed);
-
-	.buttonColappsed {
-
-		div {
-
-			svg {
-				transform: rotate(90deg);
-			}
-		}
-	}
-
-	.switchers {
-		flex-direction: column;
-	}
-}
-
 button.buttonColappsed {
 	position: absolute;
 	right: -40px;
@@ -31,7 +13,6 @@ button.buttonColappsed {
 	background-color: var(--inverted-bg-color);
 
 	div {
-
 		svg {
 			transition: transform 0.3s ease 0s;
 			transform: rotate(-90deg);
@@ -46,4 +27,51 @@ button.buttonColappsed {
 	gap: 15px;
 	bottom: 40px;
 	left: 15px;
+}
+
+.items {
+	margin: 20px 30px 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.item {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.link {
+	margin-left: 10px;
+	opacity: 1;
+}
+
+.icon {
+	fill: var(--secondory-color);
+}
+
+.colappsed {
+	width: var(--sidebar-width-colappsed);
+
+	.buttonColappsed {
+		div {
+			svg {
+				transform: rotate(90deg);
+			}
+		}
+	}
+
+	.switchers {
+		flex-direction: column;
+	}
+
+	.lang {
+		margin-left: 0;
+	}
+
+	.link {
+		opacity: 0;
+		transition: 0.2s opacity;
+		width: 0;
+	}
 }

@@ -5,6 +5,12 @@ import { SvgIcon } from 'shared/SvgIcon';
 import { useState } from 'react';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher';
+import { AppLink } from 'shared/AppLink';
+import { AppLinkTheme } from 'shared/AppLink/ui/AppLink';
+import { useTranslation } from 'react-i18next';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import MainIcon from 'shared/assets/main.svg';
+import AboutIcon from 'shared/assets/about.svg';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
@@ -12,6 +18,7 @@ interface SidebarProps {
 }
 
 export function Sidebar({ className }: SidebarProps) {
+	const { t } = useTranslation();
 	const [colappsed, setColappsed] = useState(false);
 
 	const toggleColappsed = () => {
@@ -25,8 +32,26 @@ export function Sidebar({ className }: SidebarProps) {
 				className,
 			])}
 		>
+			<div className={classNames(cls.items, {}, [])}>
+				<AppLink
+					to={RoutePath.main}
+					theme={AppLinkTheme.SECONDARY}
+					className={cls.item}
+				>
+					<MainIcon className={cls.icon} />
+					<span className={cls.link}>{t('Main Page')}</span>
+				</AppLink>
+				<AppLink
+					to={RoutePath.about}
+					theme={AppLinkTheme.SECONDARY}
+					className={cls.item}
+				>
+					<AboutIcon className={cls.icon} />
+					<span className={cls.link}>{t('About Page')}</span>
+				</AppLink>
+			</div>
 			<div className={classNames(cls.switchers, {}, [])}>
-				<LangSwitcher />
+				<LangSwitcher short={colappsed} />
 				<ThemeSwitcher />
 			</div>
 			<Button
