@@ -1,7 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { SvgIcon } from 'shared/SvgIcon';
-import { Button } from 'shared/Button';
-import { ButtonTheme } from 'shared/Button/ui/Button';
+import { SvgIcon } from 'shared/ui/SvgIcon';
+import { Button } from 'shared/ui/Button';
+import { ButtonTheme } from 'shared/ui/Button/ui/Button';
 import { useTheme } from 'app/providers/ThemeProvider';
 import ThemeIcon from '../../../shared/assets/icons/ThemeIcon.svg';
 

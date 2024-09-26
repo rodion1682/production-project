@@ -1,16 +1,16 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Button } from 'shared/Button';
 import Chevrone from 'shared/assets/icons/Chevrone.svg';
-import { SvgIcon } from 'shared/SvgIcon';
+import { SvgIcon } from 'shared/ui/SvgIcon';
 import { useState } from 'react';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher';
-import { AppLink } from 'shared/AppLink';
-import { AppLinkTheme } from 'shared/AppLink/ui/AppLink';
+import { AppLink } from 'shared/ui/AppLink';
+import { AppLinkTheme } from 'shared/ui/AppLink/ui/AppLink';
 import { useTranslation } from 'react-i18next';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import MainIcon from 'shared/assets/main.svg';
 import AboutIcon from 'shared/assets/about.svg';
+import { Button } from 'shared/ui/Button';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
